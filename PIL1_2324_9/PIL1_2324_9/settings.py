@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'PIL1_2324_9_app.apps.Pil123249AppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'PIL1_2324_9.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'PIL1_2324_9',
+        'USER' : 'postgres',
+        'PASSWORD': 'Ramzeen2005?!+',
+        'HOST' : '127.0.0.1',
+        'PORT' : '5432',
     }
 }
 
@@ -99,6 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+AUTH_USER_MODEL = 'PIL1_2324_9_app.User'
 
 
 # Internationalization
@@ -120,6 +126,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static/'),
 ]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA_PROFILE_USER')
+MEDIA_URL = '/MEDIA_PROFILE_USER/' #dossier qui recevoir les medias photos des utilisateurs
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
