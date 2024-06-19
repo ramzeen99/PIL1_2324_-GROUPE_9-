@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block mainContent %}
+<h2>Welcome on cupid {{ logged_user.name }}</h2>
+<button><a href="/showProfile/?userToShow={{ logged_user.id }}">See profile</a></button>
+<button><a href="/modifyProfile/?userToShow={{ logged_user.id }}">Modify profile</a></button>
+{% endblock mainContent %}
