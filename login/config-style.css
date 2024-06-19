@@ -1,0 +1,366 @@
+@media(max-width:600px) {
+    @font-face {
+        font-family: Poppins;
+        src: url(../assets/Fonts/Poppins-Regular.ttf);
+    }
+    *{
+        font-family: Poppins;
+        margin: 0;
+        padding: 0;
+        color: #2c0a22;
+    }
+    .but button a{
+        color: white;
+        text-decoration: none;
+    }
+    header{
+        width: calc(-2vw+100%);
+        height: 60px;
+        padding-left: 2vw;
+    }
+    .logo-container{
+        width: 60px;
+    }
+    img{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        font-size:150% ;
+    }
+    form{
+        margin: 30px;
+        max-width: 1600px;
+        
+    }
+    fieldset{
+        margin-top: 20px;
+        border: none;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .im{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    fieldset label input{
+        border: solid;
+        height: 150px;
+        width: 20vw;
+        opacity: 0;
+    }  
+    fieldset label{
+        border: solid;
+        border-radius: 20px;
+        border-color:#FE9090 ;
+        position: relative;
+        transition: all .1s;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    legend{
+        font-weight: 600;
+        opacity: 0.6;
+        margin-bottom: 10px;
+    }
+    fieldset label:hover{
+        filter: brightness(1.5);
+    }
+    .add-icon-container{
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF61D2;
+        border-radius: 1000px;
+        padding: 5px;
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+    }
+    .name-firstname-container{
+        display: none;
+    } 
+    .f-ann{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+    .f-ann input{
+        width: calc(-20px + 50px);
+        height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        border: none;
+        border: solid 1px;
+        border-color: #3e3e3e;
+        outline: none;
+        margin-right: 30px;
+        cursor: pointer;
+    }
+    .f-ann input:focus{
+        border: solid 2px;
+        border-color: #FF61D2;
+        
+    }
+    #year {
+        width: calc(-20px + 60px);
+    }
+    .f-ann input::placeholder{
+        text-align: center;
+        font-family: Poppins;
+        font-weight: 700;
+        opacity: 0.8;
+    }
+    .f-gen,.f-inn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .ch{
+        min-width: 100px;
+        max-width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        border-radius: 100px;
+        border: solid 2px #545454;
+        transition: all .1s;
+        cursor: pointer;
+    }
+    .ch:hover{
+        border: solid 2px #FF61D2;
+        color: #FF61D2;
+    }
+    button{
+        align-self: center;
+        height: 40px;
+        width: 60vw;
+        max-width: 250px;
+        color: white;
+        font-weight: 700;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(to left, #FE9090,#FF61D2);
+        transition: all .1s;
+    }
+    button:hover{
+        filter: brightness(0.8);
+    }
+    .but{
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .ch.selected {
+        border-color: #FF61D2; /* Couleur rose pour la bordure */
+        color: #FF61D2; /* Couleur rose pour le texte */
+    }
+    
+}
+@media (min-width:600px) {
+    @font-face {
+        font-family: Poppins;
+        src: url(../assets/Fonts/Poppins-Regular.ttf);
+    }
+    *{
+        font-family: Poppins;
+        margin: 0;
+        padding: 0;
+        color: #2c0a22;
+    }
+    header{
+        width: calc(-2vw+100%);
+        height: 60px;
+        padding-left: 2vw;
+    }
+    .but button a{
+        color: white;
+        text-decoration: none;
+    }
+    .logo-container{
+        width: 60px;
+    }
+    img{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        font-size:150% ;
+    }
+    form{
+        margin: 30px;
+        max-width: 1700px;
+
+    }
+    .form{
+        display: flex;
+        flex-direction: row-reverse;   
+    }
+    section{
+        margin-right: 30px;
+    }
+    fieldset{
+        margin-top: 20px;
+        border: none;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .im{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    fieldset label input{
+        border: solid;
+        height: 150px;
+        width: 20vw;
+        max-width: 100px;
+        opacity: 0;
+    }  
+    fieldset label{
+        border: solid;
+        border-radius: 20px;
+        border-color:#FE9090 ;
+        position: relative;
+        transition: all .1s;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    legend{
+        font-weight: 600;
+        opacity: 0.6;
+        margin-bottom: 10px;
+    }
+    fieldset label:hover{
+        filter: brightness(1.5);
+    }
+    .add-icon-container{
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FF61D2;
+        border-radius: 1000px;
+        padding: 5px;
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+    }
+    .name-firstname-container{
+        display: block;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    } 
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+
+    }
+    .f-ann{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+    .f-ann input{
+        width: calc(-20px + 50px);
+        height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        border: none;
+        border: solid 1px;
+        border-color: #3e3e3e;
+        outline: none;
+        margin-right: 30px;
+        cursor: pointer;
+    }
+    .f-ann input:focus{
+        border: solid 2px;
+        border-color: #FF61D2;
+        
+    }
+    #year {
+        width: calc(-20px + 60px);
+    }
+    .f-ann input::placeholder{
+        text-align: center;
+        font-family: Poppins;
+        font-weight: 700;
+        opacity: 0.8;
+    }
+    .f-gen,.f-inn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .ch{
+        min-width: 100px;
+        max-width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        border-radius: 100px;
+        border: solid 2px #545454;
+        transition: all .1s;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .ch:hover{
+        border: solid 2px #FF61D2;
+        color: #FF61D2;
+    }
+    button{
+        align-self: center;
+        height: 40px;
+        width: 60vw;
+        max-width: 250px;
+        color: white;
+        font-weight: 700;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(to left, #FE9090,#FF61D2);
+        transition: all .1s;
+    }
+    button:hover{
+        filter: brightness(0.8);
+    }
+    .but{
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .ch.selected {
+        border-color: #FF61D2; /* Couleur rose pour la bordure */
+        color: #FF61D2; /* Couleur rose pour le texte */
+    }
+}

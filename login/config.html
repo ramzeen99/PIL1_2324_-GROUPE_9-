@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="config-style.css">
+    <title>Document</title>
+</head>
+<body>
+     <header>
+        <div class="logo-container"><img src="../assets/Logo/2.svg" alt="cupid-logo"></div>
+     </header>
+     <main>
+        <h1>Configuration du Compte</h1>
+        <form action="">
+            <div class="form">
+                <fieldset>
+                    <legend>Photos de profiles</legend>
+                    <div class="im1 im">
+                        <label class="pdp1" for="pdp1"><input id="pdp1" type="file" accept="image/*"> <div class="add-icon-container"><img src="../assets/Icons/svg/bxs-image-add.svg" alt=""></div> </label>
+                        <label class="pdp2" for="pdp2"><input id="pdp2" type="file" accept="image/*"><div class="add-icon-container"><img src="../assets/Icons/svg/bxs-image-add.svg" alt=""></div></label>
+                        <label for="pdp3" class="pdp3"> <input id="pdp3" type="file" accept="image/*"><div class="add-icon-container"><img src="../assets/Icons/svg/bxs-image-add.svg" alt=""></div></label>
+                    </div>
+                    <div class="im2 im">
+                        <label for="pdp4" class="pdp4"><input id="pdp4" type="file" accept="image/*"><div class="add-icon-container"><img src="../assets/Icons/svg/bxs-image-add.svg" alt=""></div></label>               
+                        <label for="pdp5" class="pdp5"> <input id="pdp5" type="file" accept="image/*"><div class="add-icon-container"><img src="../assets/Icons/svg/bxs-image-add.svg" alt=""></div></label>               
+                        <label for="pdp6" class="pdp6"><input id="pdp6" type="file" accept="image/*"><div class="add-icon-container"><img src="../assets/Icons/svg/bxs-image-add.svg" alt=""></div></label>
+                    </div>                
+                    <p class="nb">Vous devez ajouter au minimum 1 photos</p>
+                </fieldset>
+                <section class="left">
+                    <div class="name-firstname-container ">
+                        <div class="name-input-container input-container">
+                            <label for="name" >
+                                Nom
+                            </label>
+                            <input id="name" type="name" disabled>
+                        </div>
+                        <div class="firstname-input-container input-container">
+                            <label for="firstname">
+                                Prénom
+                            </label>
+                            <input id="firstname" type="firstname" disabled>
+                        </div>
+                    </div>
+                    <div class="bird-date-form">
+                        <fieldset class="f-ann">
+                            <legend>Anniversaire</legend>
+                            <input type="text" id="day" placeholder="JJ" maxlength="2">
+                            <input type="text" id="month" placeholder="MM" maxlength="2">
+                            <input type="text" id="year" placeholder="AAAA" maxlength="4">
+                        </fieldset>
+                        
+                        <script>
+                            document.getElementById('date-input').addEventListener('change', function() {
+                                var day = document.getElementById('day').value;
+                                var month = document.getElementById('month').value;
+                                var year = document.getElementById('year').value;
+                                var fullDate = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+                                console.log(fullDate); // Vous pouvez utiliser cette date pour d'autres opérations
+                              });
+                        </script>
+                    </div>
+                    <fieldset class="f-gen">
+                        <legend>Genre</legend>
+                        <div class="ch" value="H">
+                            Homme
+                        </div>
+                        <div class="ch" value="F">
+                            Femme
+                        </div>
+                        <div class="ch" value="A">
+                            Autres                        
+                        </div>
+                    </fieldset>
+                        
+                    <fieldset class="f-inn">
+                            <legend>Intéressé(e) par:</legend>
+                            <div class="ch" value="H">
+                                Homme
+                            </div>
+                            <div class="ch" value="F">
+                                Femme
+                            </div>
+                            <div class="ch" value="T">
+                                Tout                        
+                            </div>
+                    </fieldset>
+                        
+                </section>
+            </div>
+            
+            <div class="but"><button type="submit"> <a href="../main/index.html">Confirmer</a></button></div>
+        </form>
+     </main>
+</body>
+<script>
+    // Sélectionner tous les éléments avec la classe 'ch'
+const choices = document.querySelectorAll('.ch');
+
+// Ajouter un écouteur d'événements à chaque élément
+choices.forEach(choice => {
+  choice.addEventListener('click', function() {
+    // Trouver l'élément actuellement sélectionné et le désélectionner
+    const currentlySelected = choice.parentNode.querySelector('.selected');
+    if (currentlySelected) {
+      currentlySelected.classList.remove('selected');
+    }
+
+    // Sélectionner l'élément cliqué
+    choice.classList.add('selected');
+  });
+});
+
+</script>
+</html>
