@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-style.css">
+    <title>Cupid Home</title>
+</head>
+<body>
+    <main class="desktop">
+        <section class="left-area">
+            <header class="left-area-header">
+                <div class="left-area-header-pdp-container"></div>
+                <span style="color: white;">Me</span>
+            </header> 
+            <div class="all1">
+                <nav>
+                    <ul>
+                        <li class="li" id="matchButton">Matchs</li>
+                        <li class="li" id="messageButton">Messages</li>
+                    </ul>
+                </nav>
+                <div class="msg-area content-area" id="messagesArea">
+                    <article class="online" id="onlineUsers"></article>
+                    <div class="search-area">
+                        <input type="text" name="search" id="search" placeholder="Rechercher..." >
+                    </div>
+                    <div class="msg-list" id="messageList"></div>
+                </div>
+                <div class="matchs-area  content-area" id="aarea">
+                    <div class="txt">
+                        <h2>Swipe!</h2>
+                        <p>Lorsque tu matcheras avec d'autres membres, tes Matchs seront affichés ici, où tu pourras leur envoyer un message</p>
+                    </div>
+                </div> 
+            </div> 
+            <div class="inbox-container">
+                    <header>
+                      <div class="info">
+                        <div class="fle1 vv">
+                            <img src="../assets/Icons/svg/bx-chevron-left.svg" alt="">
+                        </div>
+                        <div class="left-area-header-pdp-container"><img src="${user.avatar}" alt="" ><div class="green"></div></div>
+                        <div class="nom">
+                          <div class="name">Samuel</div>
+                          <div class="statue">En ligne</div>
+                        </div>
+                        <div class="trois vv">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </header>
+                    <section class="contenue">
+                      <aside class="msg m1">
+                        <p class="p1">That sounds great. I’d be happy with that.</p>
+                        <p class="p1">Could you send over some pictures of your dog, please?</p>
+                      </aside>
+                      <aside class="msg m2">
+                
+                        <p class="p2">Here are a few pictures. She’s a happy girl!</p>
+                        <p class="p2">Can you make it?</p>
+                      </aside>
+                      <aside class="msg m1 m">
+                        <p class="p1">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+                      </aside>
+                      <div class="footer">
+                        <div class="txt-send">
+                            <input class="text-area" type="text" placeholder="Ecrire un message...">
+                            <div class="send-but">
+                                <div class="send">
+                                    <img src="../assets/Icons/svg/bx-send.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="send-op voc vv"> <img src="../assets/Icons/svg/bx-microphone.svg" alt=""> </div>
+                        <div class="send-op im vv"><img src="../assets/Icons/svg/bx-image-add.svg" alt=""> </div>
+                      </div>
+                      
+                       
+                    </section>
+                  
+            </div>    
+        </section>
+        <style>
+          
+            .phone{
+                overflow: hidden;
+                margin-top: 10%;
+                display: none;
+                width: 280px;
+                display:flex;
+                flex-direction: column;
+                background-color: hsl(270, 20%, 96%);
+                border-radius: 25px;
+                border: 10px solid white;
+                box-shadow: 0px 5px 20px 3px rgba(0,0,0,0.2);
+            }
+            .inbox-container header{
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                margin-bottom: 5px;
+                height: 65px;
+                box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.1);
+            }
+            .info{
+                width: 100%;
+                display: flex;
+                height: 40px;
+                align-items: center;
+            }
+            .avatar{
+                width: 27px;
+                height: 27px; 
+                margin: 10px;
+                margin-left: 0%;   
+            }
+            .name{
+                font-size: 15px;
+            }
+            .statue{
+                font-size: 10px;
+                opacity: 0.4;
+            }
+            
+            .trois{
+                display: flex;
+                flex-direction: column;
+                height: 30px;
+                align-items: center;
+                justify-content: space-around;
+                position: absolute;
+                right: 25px;
+                width: 30px;
+                border-radius: 50px;
+                background-color: white;
+                box-shadow: 0px 0px 10px 2px rgba(194, 120, 183, 0.1);
+            
+            }
+            .dot{
+                width: 16%;
+                height: 16%;
+                border-radius: 4px;
+                background-color: rgb(0, 0, 0);
+            }
+            section{
+                display: flex;
+                flex-direction: column;
+            }
+            aside{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+            .p1{
+                max-width: 60%;
+                margin: 10px;
+                margin-bottom: 0px;
+                background-color:hsla(0, 0%, 85%, 0.2) ;
+                border-radius: 15px;
+                padding: 7px;
+                border-bottom-left-radius:0px ;
+                font-size: 70%;
+            }
+            .xt{
+                display: flex;
+                flex-direction: column;
+                align-items:flex-end;
+            }
+            .m2{
+                align-items: flex-end;
+            }
+            .p2{
+                max-width: 60%;
+                margin: 5px;
+                background: linear-gradient(to right, #FE9090,#FF61D2);
+                border-radius: 15px;
+                padding: 7px;
+                border-bottom-right-radius:0px ;
+                color:hsl(0, 0%, 100%) ;
+                font-size: 80%;
+                box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.1);
+            }
+            
+            .cercle{
+                width: 25px;
+                height: 25px;
+                border-radius: 100%;
+                border: 1px solid white;
+                margin-right: 15px;
+            
+            }
+            .tarif p{
+                font-size: 80%;
+                opacity: 0.8;
+            }
+            .prix{
+                position: absolute;
+                right: 20px;
+                font-size: 120%;
+                font-weight: 500;
+            }
+            article p{
+                margin-left: 30px;
+                font-size: 90%;
+                color: hsl(206, 6%, 79%);
+                
+            }
+            .boutton{
+                position: absolute;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                background-color: hsl(271, 36%, 24%);
+                border-radius: 50%;
+                align-items: flex-end;
+            }
+            .fleche2{
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                border-right: 3px solid white;
+                border-bottom: 3px solid white;
+                right: 12px;
+                top:10px;
+                transform: rotate(-40deg);
+                
+            }
+            .txt{
+                width: 90%;
+                margin-top: 25px;
+                text-align: center;
+            }
+            h1{
+                color: hsl(271, 36%, 24%);
+                margin-bottom: 20px;
+            }
+            .txt p{
+                line-height: 24px;
+                color:hsl(270, 7%, 64%) ;
+            }
+            
+          </style>
+        <section class="right-area" >
+            <div id="card-container" ">                 
+                <div class="swipe-card">
+                    <div class="info-container" id="inc">
+                        <div class="ps">
+                            <div class="pass ic"><img src="../assets/Icons/svg/bx-x copy.svg" alt=""></div>
+                            <div class="inf">
+                                <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#fff' width='24' height='24'><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                            </div>
+                            <div class="smash ic"><img src="../assets/Icons/svg/bx-heart.svg" alt=""></div>
+                        </div>
+                        <div class="info-txt">
+                            <p><span class="username">Lena </span><span class="age">12</span></p>
+                            <p>Femme</p>
+                            <p>Interessé par: <span class="rep">Homme</span></p>
+                            <p>Recherche: <span class="rep">Coup d'un soir</span></p>
+                            <p>Passions: <span class="rep">Sport</span><span class="rep">Voyage</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="self-profile-container" style="display: none;"   >
+                <div class="view">
+                    <div class="self-pdp"></div>
+                     <div class="self-info">
+                            <p><span class="username">Pierre </span><span class="age">22</span></p>
+                            <p>Femme</p>
+                            <p>Interessé par: <span class="rep">Homme</span></p>
+                            <p>Recherche: <span class="rep">Coup d'un soir</span></p>
+                            <p>Passions: <span class="rep">Sport</span><span class="rep">Voyage</span></p>
+                            <button class="profile-edit-button">Modifier le profile</button>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mobile">
+        <nav>
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" zoomAndPan="mangify" viewBox="0 0 375 374.999991" height="500" preserveAspectRatio="xMidYMid meet" version="1.0">
+                        <defs>
+                          <clipPath id="a2dd43cd43">
+                            <path d="M 0 20.523438 L 225 20.523438 L 225 354 L 0 354 Z M 0 20.523438 " clip-rule="nonzero"/>
+                          </clipPath>
+                          <clipPath id="f133d0f2d2">
+                            <path d="M 173 20.523438 L 375 20.523438 L 375 308 L 173 308 Z M 173 20.523438 " clip-rule="nonzero"/>
+                          </clipPath>
+                        </defs>
+                        <g clip-path="url(#a2dd43cd43)">
+                          <path fill="currentColor" d="M 145.886719 199.367188 C 132.179688 132.808594 150.9375 80.328125 170.355469 46.835938 C 168.164062 44.84375 165.914062 42.953125 163.605469 41.164062 C 146.226562 27.71875 126.480469 20.910156 104.933594 20.910156 C 76.09375 20.910156 49.566406 32.457031 30.238281 53.425781 C 11.132812 74.144531 0.613281 102.453125 0.613281 133.140625 C 0.613281 164.726562 12.382812 193.636719 37.652344 224.121094 C 60.253906 251.398438 92.742188 279.082031 130.332031 311.148438 C 143.179688 322.097656 157.746094 334.503906 172.847656 347.710938 C 173.839844 348.578125 174.902344 349.351562 176.03125 350.03125 C 177.164062 350.707031 178.347656 351.277344 179.582031 351.742188 C 180.816406 352.207031 182.082031 352.558594 183.378906 352.792969 C 184.675781 353.03125 185.984375 353.148438 187.304688 353.148438 C 188.621094 353.148438 189.929688 353.03125 191.226562 352.792969 C 192.523438 352.558594 193.789062 352.207031 195.023438 351.742188 C 196.257812 351.277344 197.441406 350.707031 198.574219 350.03125 C 199.703125 349.351562 200.765625 348.578125 201.757812 347.710938 C 209.683594 340.769531 217.460938 334.105469 224.910156 327.675781 C 194.367188 306.171875 159.933594 267.535156 145.886719 199.367188 Z M 145.886719 199.367188 " fill-opacity="1" fill-rule="nonzero"/>
+                        </g>
+                        <g clip-path="url(#f133d0f2d2)">
+                          <path fill="currentColor" d="M 344.429688 53.433594 C 325.101562 32.464844 298.570312 20.917969 269.730469 20.917969 C 264.972656 20.890625 260.238281 21.226562 255.53125 21.925781 C 250.824219 22.625 246.195312 23.675781 241.648438 25.082031 C 237.101562 26.484375 232.691406 28.230469 228.410156 30.308594 C 224.128906 32.390625 220.03125 34.78125 216.121094 37.488281 C 216.121094 37.488281 161.234375 91.636719 175.433594 187.3125 C 183.410156 241.03125 213.441406 282.332031 248.039062 307.957031 C 284.074219 277.246094 315.160156 250.496094 337.023438 224.128906 C 362.285156 193.636719 374.050781 164.726562 374.050781 133.148438 C 374.050781 102.453125 363.535156 74.144531 344.429688 53.433594 Z M 344.429688 53.433594 " fill-opacity="1" fill-rule="nonzero"/>
+                        </g>
+                      </svg>              
+                </li>
+
+                <li>
+                    <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M4 18h2v4.081L11.101 18H16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2z"></path><path d="M20 2H8c-1.103 0-2 .897-2 2h12c1.103 0 2 .897 2 2v8c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2z"></path></svg>
+                </li>
+                <li>
+                    <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>
+                </li>
+                <li>
+                    <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.querySelector('.left-area-header-pdp-container');
+        const cardContainer = document.querySelector('#card-container');
+        const selfProfileContainer = document.querySelector('.self-profile-container');
+    
+        toggleButton.addEventListener('click', function() {
+            if (cardContainer.style.display !== 'none') {
+                cardContainer.style.display = 'none';
+                selfProfileContainer.style.display = 'block';
+            } else {
+                cardContainer.style.display = 'block';
+                selfProfileContainer.style.display = 'none';
+            }
+        });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.querySelector('.fle1.vv');
+        const inboxContainer = document.querySelector('.inbox-container');
+        const allContainer = document.querySelector('.all1');
+    
+        toggleButton.addEventListener('click', function() {
+            if (inboxContainer.style.display !== 'none') {
+                inboxContainer.style.display = 'none';
+                allContainer.style.display = 'block';
+            } else {
+                inboxContainer.style.display = 'block';
+                allContainer.style.display = 'none';
+            }
+        });
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.swipe-card');
+        const passButton = document.querySelector('.pass');
+        const smashButton = document.querySelector('.smash');
+        const infoButton = document.querySelector('.inf');
+        const infoText = document.querySelector('.info-txt');
+        const infoC = document.querySelector('.info-container');
+      
+        // Swipe à gauche
+        function swipeLeft(card) {
+          card.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+          card.style.transform = 'translateX(-1000px) rotate(-30deg)';
+          card.style.opacity = '0';
+          setTimeout(() => {
+            card.remove();
+          }, 500);
+        }
+      
+        // Swipe à droite
+        function swipeRight(card) {
+          card.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+          card.style.transform = 'translateX(1000px) rotate(30deg)';
+          card.style.opacity = '0';
+          setTimeout(() => {
+            card.remove();
+          }, 500);
+        }
+      
+        // Gestion des boutons de swipe
+        passButton.addEventListener('click', function() {
+          if (cards.length > 0) {
+            swipeLeft(cards[cards.length - 1]);
+          }
+        });
+      
+        smashButton.addEventListener('click', function() {
+          if (cards.length > 0) {
+            swipeRight(cards[cards.length - 1]);
+          }
+        });
+      
+        // Afficher ou cacher les informations
+        infoButton.addEventListener('click', function() {
+          if (infoText.style.display === 'block') {
+            infoText.style.display = 'none';
+            infoText.style.backgroundColor = 'none';
+            infoButton.style.backgroundColor ='rgba(0, 0, 0, 0.1)'
+            infoC.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+          } else {
+            infoText.style.display = 'block';
+            infoText.style.backgroundColor = 'white';
+            infoButton.style.backgroundColor ='#aaa'
+            infoC.style.backgroundColor = 'white';
+          }
+        });
+      
+        // Initialisation des cartes pour le swipe manuel
+        cards.forEach(card => {
+          let startX, startY;
+          let isDragging = false;
+      
+          card.addEventListener('mousedown', startSwipe);
+          card.addEventListener('mousemove', swiping);
+          card.addEventListener('mouseup', endSwipe);
+          card.addEventListener('mouseleave', endSwipe);
+      
+          card.addEventListener('touchstart', (e) => startSwipe(e.touches[0]));
+          card.addEventListener('touchmove', (e) => swiping(e.touches[0]));
+          card.addEventListener('touchend', endSwipe);
+      
+          function startSwipe(e) {
+            startX = e.clientX;
+            startY = e.clientY;
+            isDragging = true;
+            card.style.transition = 'none';
+          }
+      
+          function swiping(e) {
+            if (!isDragging) return;
+            const currentX = e.clientX;
+            const distanceX = currentX - startX;
+            const rotation = distanceX * 0.2;
+            card.style.transform = `translateX(${distanceX}px) rotate(${rotation}deg)`;
+          }
+      
+          function endSwipe() {
+            if (!isDragging) return;
+            isDragging = false;
+            const endX = parseInt(card.style.transform.replace(/translateX\((.*)px\) rotate\((.*)deg\)/, '$1'));
+            if (Math.abs(endX) > 150) {
+              const direction = endX > 0 ? 1 : -1;
+              card.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+              card.style.transform = `translateX(${1000 * direction}px) rotate(${30 * direction}deg)`;
+              card.style.opacity = '0';
+              setTimeout(() => card.remove(), 500);
+            } else {
+              card.style.transition = 'transform 0.5s ease-out';
+              card.style.transform = 'translateX(0px) rotate(0deg)';
+            }
+          }
+        });
+      });
+      
+      
+
+    document.getElementById('matchButton').addEventListener('click', function() {
+        document.getElementById('aarea').style.display = 'block'; // Affiche les matchs
+        document.getElementById('messagesArea').style.display = 'none'; // Cache les messages
+        this.classList.add('active-button'); // Ajoute la classe pour le style actif
+        document.getElementById('messageButton').classList.remove('active-button'); // Retire la classe de l'autre bouton
+    });
+    
+    document.getElementById('messageButton').addEventListener('click', function() {
+        document.getElementById('aarea').style.display = 'none'; // Cache les matchs
+        document.getElementById('messagesArea').style.display = 'block'; // Affiche les messages
+        this.classList.add('active-button'); // Ajoute la classe pour le style actif
+        document.getElementById('matchButton').classList.remove('active-button'); // Retire la classe de l'autre bouton
+    });
+    
+    
+    const discussions = [
+  { id: 1, name: "Alice", message: "Bonjour, comment vas tu?" },
+  { id: 3, name: "Bob", message: "Bonjour, comment vas tu?" },
+  { id: 4, name: "John", message: "Bonjour, comment vas tu?" },
+  { id: 5, name: "Louis", message: "Bonjour, comment vas tu?" },
+  { id: 6, name: "Shiny", message: "Bonjour, comment vas tu?" },
+  { id: 7, name: "Patrick", message: "Bonjour, comment vas tu?" },
+  { id: 8, name: "Dolores", message: "Bonjour, comment vas tu?" },
+  { id: 9, name: "Jean", message: "Bonjour, comment vas tu?" },
+  { id: 10, name: "Conny", message: "Bonjour, comment vas tu?" },
+  { id: 11, name: "Sacha", message: "Bonjour, comment vas tu?" },
+];
+
+const notif = [
+  { id: 1, name: "Alice" },
+  { id: 3, name: "Bob" },
+  { id: 4, name: "John" },
+  { id: 5, name: "Louis" },
+  { id: 6, name: "Shiny" },
+  { id: 7, name: "Patrick" },
+  { id: 8, name: "Dolores" },
+  { id: 9, name: "Jean" },
+  { id: 10, name: "Conny" },
+  { id: 11, name: "Sacha" },
+];
+const onlineUsers = [
+  { id: 1, name: "Alice",avatar: "path/to/alice.jpg"},
+  { id: 3, name: "Bob",avatar: "path/to/alice.jpg"},
+  { id: 4, name: "John",avatar: "path/to/alice.jpg"},
+  { id: 5, name: "Louis",avatar: "path/to/alice.jpg"},
+  { id: 6, name: "Shiny",avatar: "path/to/alice.jpg"},
+  { id: 7, name: "Patrick",avatar: "path/to/alice.jpg"},
+  { id: 8, name: "Dolores",avatar: "path/to/alice.jpg"},
+  { id: 9, name: "Jean",avatar: "path/to/alice.jpg"},
+  { id: 10, name: "Conny",avatar: "path/to/alice.jpg"},
+  { id: 11, name: "Sacha",avatar: "path/to/alice.jpg"},
+];
+
+function matchUser(notif) {
+    const maList = document.getElementById('aarea');
+    maList.innerHTML = ''; // Nettoyer la liste existante
+    notif.forEach(notif => {
+      const maDiv = document.createElement('section');
+      maDiv.innerHTML = `<div class="left-area-header-pdp-container"></div><p>Vous avez matché avec <span class="name">${notif.name}</span></p> `;
+      maList.appendChild(maDiv);
+    });
+  }
+  matchUser(notif)
+
+function populateOnlineUsers(users) {
+  const onlineUsersDiv = document.getElementById('onlineUsers');
+  onlineUsersDiv.innerHTML = ''; // Nettoyer la liste existante
+  users.forEach(user => {
+    const userElement = document.createElement('section');
+    userElement.className = 'user';
+    userElement.innerHTML = ` <div class="left-area-header-pdp-container"><img src="${user.avatar}" alt="" ><div class="green"></div></div>  <span>${user.name}</span>`;
+    onlineUsersDiv.appendChild(userElement);
+  });
+}
+
+// Appeler la fonction
+populateOnlineUsers(onlineUsers);
+
+  function populateDiscussions(discussions) {
+    const messageList = document.getElementById('messageList');
+    messageList.innerHTML = ''; // Nettoyer la liste existante
+    discussions.forEach(discussion => {
+      const messageDiv = document.createElement('section');
+      messageDiv.innerHTML = `<div class="left-area-header-pdp-container"></div><div><strong>${discussion.name}</strong> <br> ${discussion.message}</div> `;
+      messageList.appendChild(messageDiv);
+    });
+  }
+  
+  // Appeler les fonctions
+  populateDiscussions(discussions);
+  const maList = document.getElementById('aarea');
+  maList.addEventListener('click',function(){
+    const inboxContainer = document.querySelector('.inbox-container');
+    const allContainer = document.querySelector('.all1');
+    inboxContainer.style.display = 'block';
+    allContainer.style.display = 'none';
+  })
+  const messageList = document.getElementById('messageList');
+  messageList.addEventListener('click',function(){
+    const inboxContainer = document.querySelector('.inbox-container');
+    const allContainer = document.querySelector('.all1');
+    inboxContainer.style.display = 'block';
+    allContainer.style.display = 'none';
+  })
+  const onlineUsersDiv = document.getElementById('onlineUsers');
+  onlineUsersDiv.addEventListener('click',function(){
+    const inboxContainer = document.querySelector('.inbox-container');
+    const allContainer = document.querySelector('.all1');
+    inboxContainer.style.display = 'block';
+    allContainer.style.display = 'none';
+  })
+  
+  
+</script>
+</html>
