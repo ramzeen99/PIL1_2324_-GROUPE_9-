@@ -1,9 +1,192 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Projet - Application Web de Rencontres en Ligne</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-content {
+            padding: 20px;
+            background: #ffffff;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        h1, h2, h3 {
+            color: #35424a;
+        }
+    </style>
+</head>
+<body>
 
-    </head>
-    <body>
-        
-    </body>
-</html>
+<header>
+    <div class="container">
+        <h1>Rapport de Projet - Application Web de Rencontres en Ligne</h1>
+    </div>
+</header>
+
+<div class="container">
+    <div class="main-content">
+        <h2>1. Introduction</h2>
+        <p>Ce rapport documente le développement d'une application web de rencontres en ligne, réalisé par les étudiants du groupe 9 de la Licence de l'Université d’Abomey-Calavi. Le projet est inspiré d'applications populaires telles que Meetic, Tinder, Happn et Hinge.</p>
+
+        <h2>2. Objectifs du Projet</h2>
+        <p>L'objectif principal de ce projet est de fournir une plateforme conviviale et sécurisée permettant aux utilisateurs de :</p>
+        <ul>
+            <li>Créer et gérer un compte utilisateur.</li>
+            <li>Personnaliser et administrer leur profil.</li>
+            <li>Rechercher et recevoir des suggestions de profils compatibles.</li>
+            <li>Communiquer avec d’autres utilisateurs via un système de messagerie instantanée.</li>
+            <li>Disposer d'une interface d'administration pour superviser et gérer le système.</li>
+        </ul>
+
+        <h2>3. Organisation du Groupe</h2>
+        <p>Le projet a été mené par une équipe de 9 étudiants :</p>
+        <ul>
+            <li>Chef de Groupe : BARBOZA Ramzeen</li>
+            <li>Autres Membres du Groupe : DEGUENON Samir, HOUNKPE Carlos, ADINGNI Aurélie, AGBEBLEO Brendan, SAVI Sosthène, TOGBE Fernande, AHOUANDJINOU Carmelle, LOKO Benoit</li>
+        </ul>
+
+        <h2>4. Planning du Projet</h2>
+        <p>Le projet s'est déroulé sur une période de 3 semaines avec des sprints de 2 jours pour implémenter les fonctionnalités principales.</p>
+        <h3>4.1. Déroulement du Projet</h3>
+        <ul>
+            <li>Semaine 1 : Apprentissage des technologies et langages nécessaires.</li>
+            <li>Semaine 2 : Développement de l'application.</li>
+            <li>Semaine 3 : Amélioration, optimisation, documentation et finalisation du projet.</li>
+        </ul>
+
+        <h2>5. Spécifications Fonctionnelles</h2>
+        <h3>5.1 Gestion des Comptes et Profils Utilisateur</h3>
+        <ul>
+            <li>Création de Compte</li>
+            <li>Connexion</li>
+            <li>Récupération de Mot de Passe</li>
+            <li>Personnalisation de Profil</li>
+            <li>Modification de Profil</li>
+        </ul>
+
+        <h3>5.2 Recherche, Suggestion et Mise en Contact de Partenaires Potentiels</h3>
+        <ul>
+            <li>Recherche de Profils</li>
+            <li>Suggestions de Partenaires</li>
+            <li>Filtrage des Suggestions</li>
+        </ul>
+
+        <h3>5.3 Messagerie Instantanée</h3>
+        <p>Les fonctionnalités de messagerie instantanée n'ont pas encore été développées.</p>
+
+        <h3>5.4 Dashboard Administrateur</h3>
+        <ul>
+            <li>Authentification Sécurisée</li>
+            <li>Supervision</li>
+            <li>Gestion des Comptes Utilisateur</li>
+        </ul>
+
+        <h3>5.5 Expérience Utilisateur</h3>
+        <ul>
+            <li>Interface Intuitive</li>
+            <li>Design Attractif</li>
+            <li>Compatibilité Multiplateforme</li>
+        </ul>
+
+        <h3>5.6 Sécurité et Confidentialité</h3>
+        <ul>
+            <li>Stockage Sécurisé des Données</li>
+            <li>Accès Restreint à l'Administration</li>
+        </ul>
+
+        <h2>6. Spécifications Techniques</h2>
+        <h3>6.1 Plateforme de Développement</h3>
+        <ul>
+            <li>Frontend : HTML, CSS, Vue.js, Tailwind CSS</li>
+            <li>Backend : Python, Django</li>
+            <li>Base de Données : MySQL ou PostgreSQL</li>
+        </ul>
+
+        <h3>6.2 Répartition des Tâches et Fonctionnalités</h3>
+        <h4>Frontend (HTML, CSS, Vue.js, Tailwind CSS)</h4>
+        <ul>
+            <li>Ramzeen : Supervision générale, Conception des maquettes et des interfaces utilisateur, Intégration de Tailwind CSS</li>
+            <li>Benoit : Pages de profil utilisateur, Système de swipe et de recherche</li>
+            <li>Carmelle : Structure de la page et dashboard administrateurs</li>
+            <li>Samir : Formulaires de connexion et d'inscription, Récupération de mots de passe</li>
+            <li>Aurélie : Boîte de discussion instantanée (en cours de développement)</li>
+        </ul>
+
+        <h4>Backend (Python, Django, MySQL/PostgreSQL)</h4>
+        <ul>
+            <li>Ramzeen : Supervision générale, Configuration de la base de données, API REST</li>
+            <li>Fernand : Gestion des comptes utilisateur, Authentification et récupération de mot de passe</li>
+            <li>Carlos : Gestion des profils utilisateur, Mises à jour de profil</li>
+            <li>Brendan : Recherche et suggestion de partenaires, Filtrage des suggestions</li>
+            <li>Sosthène : Système de messagerie instantanée</li>
+        </ul>
+
+        <h2>7. Contraintes de Développement</h2>
+        <ul>
+            <li>Délai de Développement : 3 semaines</li>
+            <li>Équipe de Développement : 10 étudiants</li>
+            <li>Versionnage du Code : Utilisation de Git</li>
+            <li>Hébergement du Code Source : Dépôt GitHub "PIL1_2324_9"</li>
+        </ul>
+
+        <h2>8. Critères d’Évaluation</h2>
+        <h3>8.1 Compétences Techniques </h3>
+        <ul>
+            <li>Conception d'Interfaces Web</li>
+            <li>Algèbre Relationnelle/SQL</li>
+            <li>Conception de Bases de Données</li>
+            <li>Diagrammes de Flux de Données</li>
+        </ul>
+
+        <h3>8.2 Compétences Comportementales (30%)</h3>
+        <ul>
+            <li>Collaboration</li>
+            <li>Gestion du Temps</li>
+            <li>Résolution de Problèmes</li>
+            <li>Communication Écrite et Orale</li>
+        </ul>
+
+        <h2>9. Livrables</h2>
+        <ul>
+            <li>Dépôt GitHub : "PIL1_2324_9"</li>
+            <li>Rapport
