@@ -12,14 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ramzeenbarboza@gmail.com'
-EMAIL_HOST_PASSWORD = 'uuvi jhto yday gbpx'
-EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,16 +25,6 @@ SECRET_KEY = 'django-insecure-e5*guval)z*e=ln2%#_s$mp0ni5w*jbb^p6i9(qpwd9g5+o%rw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# settings.py
-
-# CSRF_COOKIE_SECURE = True  # Assurez-vous que cela correspond à la configuration de votre serveur
-# CSRF_COOKIE_HTTPONLY = True
-# settings.py
-CSRF_COOKIE_SECURE = False  # Utilisez True en production
-CSRF_COOKIE_HTTPONLY = False
-CSRF_USE_SESSIONS = False
-# settings.py
-CSRF_FAILURE_VIEW = 'PIL1_2324_9_app.views.csrf_failure'
 ALLOWED_HOSTS = []
 
 
@@ -50,7 +32,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
-    'channels',
     'PIL1_2324_9_app.apps.Pil123249AppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -59,12 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-ASGI_APPLICATION = 'PIL1_2324_9.asgi.application'
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels.layers.InMemoryChannelLayer',
-    },
-}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -108,11 +84,6 @@ DATABASES = {
         'HOST' : '127.0.0.1',
         'PORT' : '5432',
     }
-    ,
-    'sqlite':{
-        'ENGINE':'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
 }
 
 
@@ -134,9 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 AUTH_USER_MODEL = 'PIL1_2324_9_app.User'
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-)
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -157,7 +126,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static/'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIA_PROFILE_USER')
 MEDIA_URL = '/MEDIA_PROFILE_USER/' #dossier qui recevoir les medias photos des utilisateurs
 # Default primary key field type
