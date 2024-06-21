@@ -1,15 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}"/>
-
+    <title>Document</title>
 </head>
 <body>
-    <h2>HELLO </h2>
+    <header class="hi1 header1">
+        <div class="header-logo-container">
+            <img src="{% static 'assets/Logo/2.svg' %}" alt="cupid_logo">
+        </div>
+        <button class=" but login-button">
+            Connexion
+        </button>
+    </header>
+    <main class="hi1 phone">
+        <div class="cta">
+            <h1>
+                Swipe For Love <sup>TM</sup>
+            </h1>
+            <button class=" but signup-button">
+                Créer un compte
+            </button>
+        </div>
+    </main>
+    <main class="hi2 ">
+        <div class="logo-container">
+            <img src="{% static 'assets/Logo/4.svg'%}" alt="cupid_logo">
+        </div>
+        <div class="button-container">
+            <button class=" but signup-button">
+                Créer un compte
+            </button>
+            <button class=" but login-button">
+                Connexion
+            </button>
+        </div>
+    </main>
+    <div class="popup-container" style="display: none;">
+        <div class="popup popup1" style="display: none;" >
+            <header class="signup-header">
+                <div class="signup-logo-container">
+                    <img src="{% static 'assets/Logo/3.svg' %}" alt="">
+                </div>
+                <div class="close-signup close1">
+                    <img src="{% static 'assets/Icons/svg/bx-x.svg' %}" alt="">
+                </div>
+            </header>
+            <section>
+                <h2>Inscription</h2>
+            <p class="loginsug"><span class="normal">Vous avez déjà un compte ? </span><span class="login-link"><a href="{% url 'home' %}">Connectez-vous ici.</a></span></p>
+            <form action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+                {% if errors %}
+                <ul>
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <div class="input-container">
+                {% comment %} <div class="input-container">
+                    <label for="username">
+                        Nom d'utilisateur
+                    </label>
+                    <input type="text" id="username" name="username" required>
+                </div> {% endcomment %}
+            </div>
+             
+                <div class="name-firstname-container ">
+                    <div class="name-input-container input-container">
+                        <label for="name" focused>
+                            Nom
+                        </label>
+                        <input id="name" type="name" name= "last_name" required>
+                    </div>
+                    <div class="firstname-input-container input-container">
+                        <label for="firstname">
+                            Prénom
+                        </label>
+                        <input id="firstname" type="firstname" name="first_name" required>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="mail">
+                        Adresse mail
+                    </label>
+                    <input id="mail" type="email"  name="email" required>
+                </div>
+                <div class="input-container">
+                    <label for="mdp">
+                        Mots de Passe
+                    </label>
+                    <input id="mdp" type="password"  name="password1" required>
+                </div>
+                <div class="input-container">
+                    <label for="mdp">
+                        confirmer mot de passe
+                    </label>
+                    <input id="mdp" type="password"  name="password2" required>
+                </div>
+                <button class="signup2">
+                    Créer mon compte
+                </button>
+            </form>
+            </section>
+            
+        </div>
+        <div class="popup popup2" style="display: none;">
+            <header class="signup-header">
+                <div class="signup-logo-container">
+                    <img src="{%static 'assets/Logo/3.svg'%}" alt="">
+                </div>
+                <div class="close-signup close2">
+                    <img src="{%static 'assets/Icons/svg/bx-x.svg' %}" alt="">
+                </div>
+            </header>
+            <section>
+                <h2>Connexion</h2>
+            <p class="loginsug"><span class="normal">Vous n'avez pas de compte ? </span><span class="login-link"><a href="{% url 'home' %}">Inscrivez-vous ici.</a></span></p>
+            <form action="{% url 'configuration' %}" method="post">
+               {% csrf_token %}
+               {% if errors %}
+               <ul>
+                   {% for error in errors %}
+                       <li style="color:red;">{{ error }}</li>
+                   {% endfor %}
+               </ul>
+           {% endif %}
+                <div class="input-container">
+                    <label for="log-mail">
+                        Adresse mail
+                    </label>
+                    <input id="log-mail" type="email" name="email" required>
+                </div>
+                <div class="input-container">
+                    <label for="log-mdp">
+                        Mots de Passe
+                    </label>
+                    <input id="log-mdp" type="password" name="password" required>
+                </div>
+                <button class="signup2">
+                    Se connecter
+                </button>
+                <p class="recup"><a href="{% url 'password_reset' %}">Mots de passe oublié</a></p>
+            </form>
+            </section>
+            
+        </div>
+    </div>
+    <script src="{% static 'js/js.js' %}"></script>
 </body>
 </html>

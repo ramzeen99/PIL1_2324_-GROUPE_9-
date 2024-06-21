@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Discussion avec {{ friend.username }}</title>
+</head>
+<body>
+    <h1>Discussion avec {{ friend.username }}</h1>
+    <div id="chat-log"></div>
+    <input id="chat-message-input" type="text" size="100">
+    <input id="chat-message-submit" type="button" value="Envoyer">
+    <script>
+        const roomName = "{{ friend.username }}";
+    </script>
+    <script src="{% static 'js/chat.js' %}"></script>
+</body>
+</html>
